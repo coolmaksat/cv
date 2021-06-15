@@ -1,0 +1,246 @@
+@article{deeppheno,
+    author = {Kulmanov, Maxat AND Hoehndorf, Robert},
+    journal = {PLOS Computational Biology},
+    publisher = {Public Library of Science},
+    title = {DeepPheno: Predicting single gene loss-of-function phenotypes using an ontology-aware hierarchical classifier},
+    year = {2020},
+    month = {11},
+    volume = {16},
+    url = {https://doi.org/10.1371/journal.pcbi.1008453},
+    pages = {1-22},
+    abstract = {Author summary Gene–phenotype associations can help to understand the underlying mechanisms of many genetic diseases. However, experimental identification, often involving animal models, is time consuming and expensive. Computational methods that predict gene–phenotype associations can be used instead. We developed DeepPheno, a novel approach for predicting the phenotypes resulting from a loss of function of a single gene. We use gene functions and gene expression as information to prediction phenotypes. Our method uses a neural network classifier that is able to account for hierarchical dependencies between phenotypes. We extensively evaluate our method and compare it with related approaches, and we show that DeepPheno results in better performance in several evaluations. Furthermore, we found that many of the new predictions made by our method have been added to phenotype association databases released one year later. Overall, DeepPheno simulates some aspects of human physiology and how molecular and physiological alterations lead to abnormal phenotypes.},
+    number = {11},
+    doi = {10.1371/journal.pcbi.1008453}
+}
+
+@article{deepgoplus,
+    author = {Kulmanov, Maxat and Hoehndorf, Robert},
+    title = "{DeepGOPlus: improved protein function prediction from sequence}",
+    journal = {Bioinformatics},
+    year = {2019},
+    month = {07},
+    abstract = "{Protein function prediction is one of the major tasks of bioinformatics that can help in wide range of biological problems such as understanding disease mechanisms or finding drug targets. Many methods are available for predicting protein functions from sequence based features, protein–protein interaction networks, protein structure or literature. However, other than sequence, most of the features are difficult to obtain or not available for many proteins thereby limiting their scope. Furthermore, the performance of sequence-based function prediction methods is often lower than methods that incorporate multiple features and predicting protein functions may require a lot of time.We developed a novel method for predicting protein functions from sequence alone which combines deep convolutional neural network (CNN) model with sequence similarity based predictions. Our CNN model scans the sequence for motifs which are predictive for protein functions and combines this with functions of similar proteins (if available). We evaluate the performance of DeepGOPlus using the CAFA3 evaluation measures and achieve an Fmax of 0.390, 0.557 and 0.614 for BPO, MFO and CCO evaluations, respectively. These results would have made DeepGOPlus one of the three best predictors in CCO and the second best performing method in the BPO and MFO evaluations. We also compare DeepGOPlus with state-of-the-art methods such as DeepText2GO and GOLabeler on another dataset. DeepGOPlus can annotate around 40 protein sequences per second on common hardware, thereby making fast and accurate function predictions available for a wide range of proteins.http://deepgoplus.bio2vec.net/.Supplementary data are available at Bioinformatics online.}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btz595},
+    url = {https://doi.org/10.1093/bioinformatics/btz595},
+    eprint = {http://oup.prod.sis.lan/bioinformatics/advance-article-pdf/doi/10.1093/bioinformatics/btz595/29192371/btz595.pdf},
+}
+
+
+@article{deepgo,
+    author = {Kulmanov, Maxat and Khan, Mohammed Asif and Hoehndorf, Robert},
+    title = "{DeepGO: predicting protein functions from sequence and interactions using a deep ontology-aware classifier}",
+    journal = {Bioinformatics},
+    volume = {34},
+    number = {4},
+    pages = {660-668},
+    year = {2017},
+    month = {10},
+    abstract = "{A large number of protein sequences are becoming available through the application of novel high-throughput sequencing technologies. Experimental functional characterization of these proteins is time-consuming and expensive, and is often only done rigorously for few selected model organisms. Computational function prediction approaches have been suggested to fill this gap. The functions of proteins are classified using the Gene Ontology (GO), which contains over 40 000 classes. Additionally, proteins have multiple functions, making function prediction a large-scale, multi-class, multi-label problem.We have developed a novel method to predict protein function from sequence. We use deep learning to learn features from protein sequences as well as a cross-species protein–protein interaction network. Our approach specifically outputs information in the structure of the GO and utilizes the dependencies between GO classes as background information to construct a deep learning model. We evaluate our method using the standards established by the Computational Assessment of Function Annotation (CAFA) and demonstrate a significant improvement over baseline methods such as BLAST, in particular for predicting cellular locations.Web server: http://deepgo.bio2vec.net, Source code: https://github.com/bio-ontology-research-group/deepgoSupplementary data are available at Bioinformatics online.}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btx624},
+    url = {https://doi.org/10.1093/bioinformatics/btx624},
+    eprint = {http://oup.prod.sis.lan/bioinformatics/article-pdf/34/4/660/25117339/btx624.pdf},
+}
+
+@article{phenogo,
+    author = {Kulmanov, Maxat and Schofield, Paul N and Gkoutos, Georgios V and Hoehndorf, Robert},
+    title = "{Ontology-based validation and identification of regulatory phenotypes}",
+    journal = {Bioinformatics},
+    volume = {34},
+    number = {17},
+    pages = {i857-i865},
+    year = {2018},
+    month = {09},
+    abstract = "{Function annotations of gene products, and phenotype annotations of genotypes, provide valuable information about molecular mechanisms that can be utilized by computational methods to identify functional and phenotypic relatedness, improve our understanding of disease and pathobiology, and lead to discovery of drug targets. Identifying functions and phenotypes commonly requires experiments which are time-consuming and expensive to carry out; creating the annotations additionally requires a curator to make an assertion based on reported evidence. Support to validate the mutual consistency of functional and phenotype annotations as well as a computational method to predict phenotypes from function annotations, would greatly improve the utility of function annotations.We developed a novel ontology-based method to validate the mutual consistency of function and phenotype annotations. We apply our method to mouse and human annotations, and identify several inconsistencies that can be resolved to improve overall annotation quality. We also apply our method to the rule-based prediction of regulatory phenotypes from functions and demonstrate that we can predict these phenotypes with Fmax of up to 0.647.https://github.com/bio-ontology-research-group/phenogocon}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/bty605},
+    url = {https://doi.org/10.1093/bioinformatics/bty605},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/34/17/i857/25702307/bty605.pdf},
+}
+
+@Article{cafa3,
+  author = {Zhou, Naihui and Jiang, Yuxiang and Bergquist, Timothy R and Lee, Alexandra J and Kacsoh, Balint Z and Crocker, Alex W and Lewis, Kimberley A and Georghiou, George and Nguyen, Huy N and Hamid, Md Nafiz and Davis, Larry and Dogan, Tunca and Atalay, Volkan and Rifaioglu, Ahmet S and Dalkiran, Alperen and Cetin-Atalay, Rengul and Zhang, Chengxin and Hurto, Rebecca L and Freddolino, Peter L and Zhang, Yang and Bhat, Prajwal and Supek, Fran and Fern{\'a}ndez, Jos{\'e} M and Gemovic, Branislava and Perovic, Vladimir R and Davidovi{\'c}, Radoslav S and Sumonja, Neven and Veljkovic, Nevena and Asgari, Ehsaneddin and Mofrad, Mohammad RK and Profiti, Giuseppe and Savojardo, Castrense and Martelli, Pier Luigi and Casadio, Rita and Boecker, Florian and Kahanda, Indika and Thurlby, Natalie and McHardy, Alice C and Renaux, Alexandre and Saidi, Rabie and Gough, Julian and Freitas, Alex A and Antczak, Magdalena and Fabris, Fabio and Wass, Mark N and Hou, Jie and Cheng, Jianlin and Hou, Jie and Wang, Zheng and Romero, Alfonso E and Paccanaro, Alberto and Yang, Haixuan and Goldberg, Tatyana and Zhao, Chenguang and Holm, Liisa and T{\"o}r{\"o}nen, Petri and Medlar, Alan J and Zosa, Elaine and Borukhov, Itamar and Novikov, Ilya and Wilkins, Angela and Lichtarge, Olivier and Chi, Po-Han and Tseng, Wei-Cheng and Linial, Michal and Rose, Peter W and Dessimoz, Christophe and Vidulin, Vedrana and Dzeroski, Saso and Sillitoe, Ian and Das, Sayoni and Lees, Jonathan Gill and Jones, David T and Wan, Cen and Cozzetto, Domenico and Fa, Rui and Torres, Mateo and Vesztrocy, Alex Wiarwick and Rodriguez, Jose Manuel and Tress, Michael L and Frasca, Marco and Notaro, Marco and Grossi, Giuliano and Petrini, Alessandro and Re, Matteo and Valentini, Giorgio and Mesiti, Marco and Roche, Daniel B and Reeb, Jonas and Ritchie, David W and Aridhi, Sabeur and Alborzi, Seyed Ziaeddin and Devignes, Marie-Dominique and Emily Koo, Da Chen and Bonneau, Richard and Gligorijevi{\'c}, Vladimir and Barot, Meet and Fang, Hai and Toppo, Stefano and Lavezzo, Enrico and Falda, Marco and Berselli, Michele and Tosatto, Silvio CE and Carraro, Marco and Piovesan, Damiano and Rehman, Hafeez Ur and Mao, Qizhong and Zhang, Shanshan and Vucetic, Slobodan and Black, Gage S and Jo, Dane and Larsen, Dallas J and Omdahl, Ashton R and Sagers, Luke W and Suh, Erica and Dayton, Jonathan B and McGuffin, Liam J and Brackenridge, Danielle A and Babbitt, Patricia C and Yunes, Jeffrey M and Fontana, Paolo and Zhang, Feng and Zhu, Shanfeng and You, Ronghui and Zhang, Zihan and Dai, Suyang and Yao, Shuwei and Tian, Weidong and Cao, Renzhi and Chandler, Caleb and Amezola, Miguel and Johnson, Devon and Chang, Jia-Ming and Liao, Wen-Hung and Liu, Yi-Wei and Pascarelli, Stefano and Frank, Yotam and Hoehndorf, Robert and Kulmanov, Maxat and Boudellioua, Imane and Politano, Gianfranco and Di Carlo, Stefano and Benso, Alfredo and Hakala, Kai and Ginter, Filip and Mehryary, Farrokh and Kaewphan, Suwisa and Bj{\"o}rne, Jari and Moen, Hans and Tolvanen, Martti E E and Salakoski, Tapio and Kihara, Daisuke and Jain, Aashish and {\v S}muc, Tomislav and Altenhoff, Adrian and Ben-Hur, Asa and Rost, Burkhard and Brenner, Steven E and Orengo, Christine A and Jeffery, Constance J and Bosco, Giovanni and Hogan, Deborah A and Martin, Maria J and O{\textquoteright}Donovan, Claire and Mooney, Sean D and Greene, Casey S and Radivojac, Predrag and Friedberg$^*$, Iddo},
+  title = 	 {The CAFA challenge reports improved protein function prediction and new functional annotations for hundreds of genes through experimental screens},
+  journal = 	 {Genome Biology},
+  year = 	 {2019},
+  volume = {20},
+  pages = {244},
+  OPTkey = 	 {},
+  OPTvolume = 	 {},
+  OPTnumber = 	 {},
+  OPTpages = 	 {},
+  OPTmonth = 	 {},
+  OPTannote = 	 {}
+}
+
+
+
+@ARTICLE{Alam2020,
+AUTHOR={Alam, Intikhab and Kamau, Allan A. and Kulmanov, Maxat and Jaremko, Lukasz and Arold, Stefan T. and Pain, Arnab and Gojobori, Takashi and Duarte, Carlos M.},
+TITLE={Functional Pangenome Analysis Shows Key Features of E Protein Are Preserved in SARS and SARS-CoV-2},      
+JOURNAL={Frontiers in Cellular and Infection Microbiology},      
+VOLUME={10},      
+PAGES={405},     
+YEAR={2020},      
+URL={https://www.frontiersin.org/article/10.3389/fcimb.2020.00405},       
+DOI={10.3389/fcimb.2020.00405},      
+ISSN={2235-2988}
+}
+
+﻿@Article{Salhi2017,
+author={Salhi, Adil
+and Negr{\~a}o, S{\'o}nia
+and Essack, Magbubah
+and Morton, Mitchell J. L.
+and Bougouffa, Salim
+and Razali, Rozaimi
+and Radovanovic, Aleksandar
+and Marchand, Benoit
+and Kulmanov, Maxat
+and Hoehndorf, Robert
+and Tester, Mark
+and Bajic, Vladimir B.},
+title={DES-TOMATO: A Knowledge Exploration System Focused On Tomato Species},
+journal={Scientific Reports},
+year={2017},
+month={Jul},
+day={20},
+volume={7},
+number={1},
+pages={5968},
+abstract={Tomato is the most economically important horticultural crop used as a model to study plant biology and particularly fruit development. Knowledge obtained from tomato research initiated improvements in tomato and, being transferrable to other such economically important crops, has led to a surge of tomato-related research and published literature. We developed DES-TOMATO knowledgebase (KB) for exploration of information related to tomato. Information exploration is enabled through terms from 26 dictionaries and combination of these terms. To illustrate the utility of DES-TOMATO, we provide several examples how one can efficiently use this KB to retrieve known or potentially novel information. DES-TOMATO is free for academic and nonprofit users and can be accessed at http://cbrc.kaust.edu.sa/des{\_}tomato/, using any of the mainstream web browsers, including Firefox, Safari and Chrome.},
+issn={2045-2322},
+doi={10.1038/s41598-017-05448-0},
+url={https://doi.org/10.1038/s41598-017-05448-0}
+}
+
+
+@article{Boudellioua2017,
+    author = {Boudellioua, Imane AND Mahamad Razali, Rozaimi B. AND Kulmanov, Maxat AND Hashish, Yasmeen AND Bajic, Vladimir B. AND Goncalves-Serra, Eva AND Schoenmakers, Nadia AND Gkoutos, Georgios V. AND Schofield, Paul N. AND Hoehndorf, Robert},
+    journal = {PLOS Computational Biology},
+    publisher = {Public Library of Science},
+    title = {Semantic prioritization of novel causative genomic variants},
+    year = {2017},
+    month = {04},
+    volume = {13},
+    url = {https://doi.org/10.1371/journal.pcbi.1005500},
+    pages = {1-21},
+    abstract = {Author summary We address the problem of how to distinguish which of the many thousands of DNA sequence variants carried by an individual with a rare disease is responsible for the disease phenotypes. This can help clinicians arrive at a diagnosis, but also can be instrumental in improving our understanding of the pathobiology of the disease. Many methods are currently available to help with the problem of determining causative variant, using information about evolutionary conservation and prediction of the functional consequences of the sequence variant. We have developed a novel algorithm (PVP) which augments existing strategies by using the similarity of the patients phenotype to known phenotype-genotype data in human and model organism databases to further rank potential candidate genes. In a retrospective study, we apply PVP to the interpretation of whole exome sequencing data in patients suffering from congenital hypothyroidism, and find that PVP accurately identifies causative variants in whole exome and whole genome sequencing datasets and provides a powerful resource for the discovery of causal variants.},
+    number = {4},
+    doi = {10.1371/journal.pcbi.1005500}
+}
+
+﻿@article{Kulmanov2017,
+  author={Kulmanov, Maxat and Hoehndorf, Robert},
+  title={Evaluating the effect of annotation size on measures of semantic similarity},
+  journal={Journal of Biomedical Semantics},
+  year={2017},
+  month={Feb},
+day={13},
+volume={8},
+number={1},
+pages={7},
+abstract={Ontologies are widely used as metadata in biological and biomedical datasets. Measures of semantic similarity utilize ontologies to determine how similar two entities annotated with classes from ontologies are, and semantic similarity is increasingly applied in applications ranging from diagnosis of disease to investigation in gene networks and functions of gene products.},
+issn={2041-1480},
+doi={10.1186/s13326-017-0119-z},
+url={https://doi.org/10.1186/s13326-017-0119-z}
+}
+
+﻿@Article{Boudellioua2019,
+author={Boudellioua, Imane
+and Kulmanov, Maxat
+and Schofield, Paul N.
+and Gkoutos, Georgios V.
+and Hoehndorf, Robert},
+title={DeepPVP: phenotype-based prioritization of causative variants using deep learning},
+journal={BMC Bioinformatics},
+year={2019},
+month={Feb},
+day={06},
+volume={20},
+number={1},
+pages={65},
+abstract={Prioritization of variants in personal genomic data is a major challenge. Recently, computational methods that rely on comparing phenotype similarity have shown to be useful to identify causative variants. In these methods, pathogenicity prediction is combined with a semantic similarity measure to prioritize not only variants that are likely to be dysfunctional but those that are likely involved in the pathogenesis of a patient's phenotype.},
+issn={1471-2105},
+doi={10.1186/s12859-019-2633-8},
+url={https://doi.org/10.1186/s12859-019-2633-8}
+}
+
+﻿@Article{Boudellioua2018,
+author={Boudellioua, Imane
+and Kulmanov, Maxat
+and Schofield, Paul N.
+and Gkoutos, Georgios V.
+and Hoehndorf, Robert},
+title={OligoPVP: Phenotype-driven analysis of individual genomic information to prioritize oligogenic disease variants},
+journal={Scientific Reports},
+year={2018},
+month={Oct},
+day={02},
+volume={8},
+number={1},
+pages={14681},
+abstract={An increasing number of disorders have been identified for which two or more distinct alleles in two or more genes are required to either cause the disease or to significantly modify its onset, severity or phenotype. It is difficult to discover such interactions using existing approaches. The purpose of our work is to develop and evaluate a system that can identify combinations of alleles underlying digenic and oligogenic diseases in individual whole exome or whole genome sequences. Information that links patient phenotypes to databases of gene--phenotype associations observed in clinical or non-human model organism research can provide useful information and improve variant prioritization for genetic diseases. Additional background knowledge about interactions between genes can be utilized to identify sets of variants in different genes in the same individual which may then contribute to the overall disease phenotype. We have developed OligoPVP, an algorithm that can be used to prioritize causative combinations of variants in digenic and oligogenic diseases, using whole exome or whole genome sequences together with patient phenotypes as input. We demonstrate that OligoPVP has significantly improved performance when compared to state of the art pathogenicity detection methods in the case of digenic diseases. Our results show that OligoPVP can efficiently prioritize sets of variants in digenic diseases using a phenotype-driven approach and identify etiologically important variants in whole genomes. OligoPVP naturally extends to oligogenic disease involving interactions between variants in two or more genes. It can be applied to the identification of multiple interacting candidate variants contributing to phenotype, where the action of modifier genes is suspected from pedigree analysis or failure of traditional causative variant identification.},
+issn={2045-2322},
+doi={10.1038/s41598-018-32876-3},
+url={https://doi.org/10.1038/s41598-018-32876-3}
+}
+
+
+﻿@Article{Kafkas2019,
+author={Kafkas, {\c{S}}enay
+and Abdelhakim, Marwa
+and Hashish, Yasmeen
+and Kulmanov, Maxat
+and Abdellatif, Marwa
+and Schofield, Paul N.
+and Hoehndorf, Robert},
+title={PathoPhenoDB, linking human pathogens to their phenotypes in support of infectious disease research},
+journal={Scientific Data},
+year={2019},
+month={Jun},
+day={03},
+volume={6},
+number={1},
+pages={79},
+abstract={Understanding the relationship between the pathophysiology of infectious disease, the biology of the causative agent and the development of therapeutic and diagnostic approaches is dependent on the synthesis of a wide range of types of information. Provision of a comprehensive and integrated disease phenotype knowledgebase has the potential to provide novel and orthogonal sources of information for the understanding of infectious agent pathogenesis, and support for research on disease mechanisms. We have developed PathoPhenoDB, a database containing pathogen-to-phenotype associations. PathoPhenoDB relies on manual curation of pathogen-disease relations, on ontology-based text mining as well as manual curation to associate host disease phenotypes with infectious agents. Using Semantic Web technologies, PathoPhenoDB also links to knowledge about drug resistance mechanisms and drugs used in the treatment of infectious diseases. PathoPhenoDB is accessible at http://patho.phenomebrowser.net/, and the data are freely available through a public SPARQL endpoint.},
+issn={2052-4463},
+doi={10.1038/s41597-019-0090-x},
+url={https://doi.org/10.1038/s41597-019-0090-x}
+}
+
+
+
+@article{Dimonaco2019,
+   author = "Dimonaco, Nicholas and Creevey, Chris and Hoehndorf, Robert and Kulmanov, Maxat and Liuwei, Wang and Clare, Amanda and Aubrey, Wayne and Kenobi, Kim",
+   title = "Uncovering the dark matter of the metagenome one read at a time", 
+   journal= "Access Microbiology",
+   year = "2019",
+   volume = "1",
+   number = "1A",
+   pages = "",
+   doi = "https://doi.org/10.1099/acmi.ac2019.po0557",
+   url = "https://www.microbiologyresearch.org/content/journal/acmi/10.1099/acmi.ac2019.po0557",
+   publisher = "Microbiology Society",
+   issn = "",
+   type = "Journal Article",
+    eid = "864",
+   abstract = "Contemporary metagenomic annotation methods have proven insufficient in our attempts to better understand the complex environments around us. We call the yet to be annotated part of a metagenome it’s ‘dark matter’. The Gene Ontology (GO) is a hierarchical vocabulary used to describe gene product function and a large collection of curated genes with GO annotations already exists. DeepGO utilises deep learning to build models from these curated genes and gene products to predict GO categories for novel proteins. One of the major problems with metagenomic studies today is the process of assembling the environmental DNA sequences into their original genomes. This is difficult, with chimeric metagenomically assembled genomes being common. To avoid this and the computational and time expense, we have modified DeepGO to perform protein function prediction directly from sequence reads with limited protein coding sequence prediction. Three independent models were trained as the following; The first 50 amino acids of a protein were used for training, The last 50 amino acids were used for training, A phasing window of 50 amino acids was used to train across the entirety of a protein sequence. These models were chosen to learn from the different parts of a protein sequence we are likely to capture from only the short unassembled sequence reads. We compared the three models by producing a mock metagenomic community consisting of 6 model bacterial genomes. We evaluated the functions predicted from the unassembled sequence reads and the protein coding sequences predicted from the assembled metagenome.",
+  }
+
+@article{mowl,
+    author = {Kulmanov, Maxat and Smaili, Fatima Zohra and Gao, Xin and Hoehndorf, Robert},
+    title = "{Semantic similarity and machine learning with ontologies}",
+    journal = {Briefings in Bioinformatics},
+    year = {2020},
+    month = {10},
+    abstract = "{Ontologies have long been employed in the life sciences to formally represent and reason over domain knowledge and they are employed in almost every major biological database. Recently, ontologies are increasingly being used to provide background knowledge in similarity-based analysis and machine learning models. The methods employed to combine ontologies and machine learning are still novel and actively being developed. We provide an overview over the methods that use ontologies to compute similarity and incorporate them in machine learning methods; in particular, we outline how semantic similarity measures and ontology embeddings can exploit the background knowledge in ontologies and how ontologies can provide constraints that improve machine learning models. The methods and experiments we describe are available as a set of executable notebooks, and we also provide a set of slides and additional resources at https://github.com/bio-ontology-research-group/machine-learning-with-ontologies.}",
+    issn = {1477-4054},
+    doi = {10.1093/bib/bbaa199},
+    url = {https://doi.org/10.1093/bib/bbaa199},
+    note = {bbaa199},
+    eprint = {https://academic.oup.com/bib/advance-article-pdf/doi/10.1093/bib/bbaa199/33875255/bbaa199.pdf},
+}
+
+

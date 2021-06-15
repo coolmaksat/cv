@@ -1,0 +1,701 @@
+% Adapted from:
+% URL: http://nitens.org/taraborelli/cvtex
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{booktabs}
+\usepackage[style=numeric, doi=false, isbn=false, url=false,
+natbib=true, sorting=ydnt, maxbibnames=99,
+backend=biber, giveninits=true]{biblatex}
+
+\DeclareNameAlias{sortname}{family-given}
+\DeclareNameAlias{default}{family-given}
+
+\usepackage{soul}
+\usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
+\usepackage[normalem]{ulem}
+
+
+\makeatletter
+\newbibmacro*{name:bold}[2]{%
+  \edef\blx@tmp@name{\expandonce#1, \expandonce#2}%
+%  \def\do##1{\ifdefstring{\blx@tmp@name}{##1}{\bfseries\listbreak}{}}%
+  \def\do##1{\ifdefstring{\blx@tmp@name}{##1}{\bfseries\listbreak}{}}%
+  \dolistloop{\boldnames}}
+\newcommand*{\boldnames}{}
+\makeatother
+
+\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:family}{\endgroup}{}{}
+\xapptobibmacro{name:given-family}{\endgroup}{}{}
+\xapptobibmacro{name:family-given}{\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+%\renewcommand{\bfseries}{\underline}
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=5.5in, textheight=8.5in, marginparsep=7pt, marginparwidth=.6in}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{color}
+% \usepackage{xunicode}
+% \usepackage{xltxtra}
+% \defaultfontfeatures{Mapping=tex-text}
+% \setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
+% \setmonofont[Scale=0.8]{Monaco}
+\usepackage{libertine}
+
+
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+%\newcommand{\amper{}}{\chardef\amper="E0BD }
+\newcommand{\years}[1]{\marginnote{\small #1}}
+\renewcommand*{\raggedleftmarginnote}{}
+\setlength{\marginparsep}{25pt}
+\reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem}
+\sectionfont{\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\Large} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[bookmarks, colorlinks, breaklinks, 
+% ---- FILL IN HERE THE TITLE AND AUTHOR
+	pdftitle={Maxat Kulmanov - CV},
+	pdfauthor={Maxat Kulmanov},
+	pdfproducer={https://coolmaksat.github.io}
+]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+% DOCUMENT
+\begin{document}
+\centerline{{\LARGE Maxat Kulmanov}}
+\vspace{1cm}
+King Abdullah University of Science and Technology\\
+Computer, Electrical and Mathematical Sciences \& Engineering
+Division\\
+Computational Bioscience Research Center\\
+4700 King Abdullah University of Science and Technology\\
+Thuwal 23955-6900\\
+Kingdom of Saudi Arabia\\[.2cm]
+%Phone: \texttt{+966 2 808 1643}\\
+%Fax: \texttt{609-924-8399}\\
+email: \href{mailto:maxat.kulmanov@kaust.edu.sa}{maxat.kulmanov@kaust.edu.sa}\\
+%\textsc{url}: \href{http://borg.kaust.edu.sa/}{http://borg.kaust.edu.sa/}\\ 
+
+% \vspace{3mm}
+% \noindent
+% Day of birth:  May 30, 1980\\
+% Place of birth: Leipzig, Germany\\
+% Marital status: Single\\
+% Nationality: German
+
+%\hrule
+
+\section*{Education}
+\noindent
+\years{2015-2020}King Abdullah University of Science and Technology,
+Thuwal, Saudi Arabia.
+  \begin{itemize}
+  \item PhD in Computer Science
+  % \item Member of graduate schools {\em Knowledge Representation} and
+  %   {\em Leipzig School of Human Origins}
+  \item Dissertation title: {\em Predicting Gene Functions and Phenotypes by combining
+Deep Learning and Ontologies}
+ \item Advisor: Prof. Dr. Robert Hoehndorf
+  \end{itemize}
+\years{2009-2010}Kazakh-British Technical University, Almaty, Kazakhstan.
+\begin{itemize}
+\item M.Sc. in Engineering and Technology.
+\end{itemize}
+\years{2005-2009}Kazakh-British Technical University, Almaty, Kazakhstan.
+\begin{itemize}
+\item B.Sc. in Information Systems.
+\end{itemize}
+
+% \begin{itemize}
+% \item Minor subject: Logics and Philosophy of Science
+% \end{itemize}
+%\hrule
+
+\section*{Professional experience}
+% \noindent
+\years{2020--now}{\em Postdoctoral Researcher} in Computer Science,
+Computer, Electrical, and Mathematical Sciences \& Engineering
+Division, King Abdullah University of Science and Technology.\vspace{.3cm}\\
+\years{2014-2015}{\em Lead Software Developer},
+Education Systems Production, Almaty, Kazakhstan.\vspace{.3cm}\\
+\years{2012-2014}{\em Software Developer},
+Executive Consulting, Almaty, Kazakhstan.\vspace{.3cm}\\
+\years{2011-2012}{\em Visiting Researcher} in Software Engineering Department,
+University of Oldenburg, Germany.\vspace{.3cm}\\
+\years{2009-2011}{\em Lecturer}, Kazakh-British Technical University.\vspace{.3cm}\\
+\years{2007-2009}{\em Software Developer}, Ferrum Logic, Almaty, Kazakhstan.\vspace{.3cm}\\
+
+\section*{Researcher identifiers}
+\begin{itemize}
+\item ORCID: 0000-0003-1710-1820
+\item ResearchID: AAG-5628-2021
+\item SCOPUS: 57193354710
+\end{itemize}
+
+\section*{Awards and fellowships}
+\noindent
+\years{2019}{\em Travel Fellowship} NBDC/DBCLS 2019 BioHackathon.\vspace{.3cm}\\
+\years{2018}{\em Travel Fellowship} NBDC/DBCLS 2018 BioHackathon.\vspace{.3cm}\\
+\years{2015-2020}{\em PhD Fellowship}, King Abdullah
+University of Science and Technology, Thuwal, Saudi Arabia. \vspace{.3cm}\\
+\years{2011-2012}{\em Erasmus Mundus Scholarship}, University of
+Oldenburg, Oldenburg, Germany. \vspace{.3cm}\\
+\years{2009-2010}{\em M.Sc Fellowship}, Kazakh-British Technical
+University, Almaty, Kazakhstan. \vspace{.3cm}\\
+
+\section*{Professional affiliations}
+\years{2016--now} International Society of Computational Biology
+(ISCB)
+
+\section*{Publications}
+
+\forcsvlist{\listadd\boldnames}{
+  {Kulmanov, M\bibinitperiod},
+  {Kulmanov, M.},
+}
+
+Since I joined KAUST I published 14 papers in peer-reviewed journal
+articles and 2 conference articles of which 8 were first-authored by
+me.
+
+%\section*{Refereed publications}
+
+%\subsection*{Journal articles}
+
+%\addbibresource{article-kaust}
+\begin{refsection}[articles]
+\nocite{*}
+\end{refsection}
+\begin{refsection}[articles-conf]
+\nocite{*}
+\end{refsection}
+
+\defbibheading{subbibliography}[\refname]{\subsubsection*{#1}}
+\subsection*{Peer-reviewed journal articles}
+\printbibliography[section=1, heading=subbibliography]
+
+\subsection*{Conference articles}
+
+\printbibliography[section=2, heading=subbibliography]
+
+\subsubsection*{Tutorials}
+
+\years{2019}{\em Semantic similarity and machine learning with
+  ontologies}. Joint Ontology Workshops (JOWO) (with Robert Hoehndorf).\vspace{.3cm}\\
+
+\subsubsection*{Invited talks}
+\years{2020}{\em DeepPheno: Predicting single gene loss-of-function
+  phenotypes using an ontology-aware hierarchical
+  classifier}. Function SIG Meeting, ISMB/ECCB, Virtual Conference.
+Digital Health Conference, Thuwal, Saudi Arabia.\vspace{.3cm}\\
+\years{2020}{\em DeepPheno: Predicting single gene knockout phenotypes.}
+Digital Health Conference, Thuwal, Saudi Arabia.\vspace{.3cm}\\
+\years{2019}{\em DeepGOPlus: Improving protein function prediction from sequence.}
+BioHackathon, Fukuoka, Japan.\vspace{.3cm}\\
+\years{2019}{\em Vec2SPARQL: integrating SPARQL queries and knowledge
+  graph embeddings.} Artificial Intelligence in Medicine Conference, Thuwal,
+Saudi Arabia.\vspace{.3cm}\\
+\years{2018}{\em Vec2SPARQL: integrating SPARQL queries and knowledge
+  graph embeddings.}
+BioHackathon, Matsue, Shimane, Japan.\vspace{.3cm}\\
+\years{2018}{\em Ontology-based validation and identification of
+  regulatory phenotypes}. ECCB, Athens, Greece.
+\years{2017}{\em DeepGO: Predicting Protein Functions from Sequence
+  and Interactions Using a Deep Ontology-aware Classifier.}
+Function SIG Meeting ISMB/ECCB, Prague, Czech Republic.\vspace{.3cm}\\
+\years{2017}{\em DeepGO: Predicting Protein Functions from Sequence
+  and Interactions Using a Deep Ontology-aware Classifier.}
+Big Data Analyses in Evolutionary Biology, Thuwal,
+Saudi Arabia.\vspace{.3cm}\\
+\years{2016}{\em Evaluating the effect of annotation size on measures of semantic similarity.}
+Bio-Ontologies SIG Meeting, ISMB, Orlando, USA.\vspace{.3cm}\\
+
+% \section*{Research funds}
+
+% \years{2019-2021}{\em CompleX: Variant Prioritization in Complex Disease}
+% \begin{itemize}
+% \item Funding body: KAUST (Competitive Research Grant)
+% \item PI: Robert Hoehndorf
+% \item Co-Investigators: Paul N Schofield, Georgios V Gkoutos
+% \item Amount: 399,998 USD (240,000 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \years{2019}{\em Whole genome sequencing of rare disease patients.}
+% \begin{itemize}
+% \item Funding body: KAUST (OSR Director's Award, Digital Health Initiative)
+% \item PI: Robert Hoehndorf
+% \item Total amount: 138,600 USD (138,600 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \years{2018-2020}{\em Sequencing and computational analysis of MRSA samples.}
+% \begin{itemize}
+% \item Funding body: KACST
+% \item PI: Robert Hoehndorf, Mohammed Al Fageeh
+% \item Co-Investigators: Takashi Gojobori, Vladimir Bajic
+% \item Total amount: 362,159 USD (362,159 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \years{2018-2019}{\em Improvement of genetic variant prioritization technology.}
+% \begin{itemize}
+% \item Funding body: KAUST (Center Partnership Fund)
+% \item PI: Robert Hoehndorf
+% \item Co-Investigators: Paul Schofield, Georgios Gkoutos, Vladimir Bajic
+% \item Total amount: 129,715 USD (9,500 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \years{2018-2020}{\em Bio2Vec: Smart analytics infrastructure for the
+%   life sciences.}
+% \begin{itemize}
+% \item Funding body: KAUST (Competitive Research Grant)
+% \item PI: Robert Hoehndorf
+% \item Co-Investigators: Xin Gao, Michel Dumontier, Jens Lehmann
+% \item Total amount: 399,986 USD (113,250 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \years{2018-2020}{\em The Whale Shark 100: Applying Population
+%   Genomics to Understand Mysteries of the World’s Largest Fish.}
+% \begin{itemize}
+% \item Funding body: KAUST (Competitive Research Grant)
+% \item PI: Takashi Gojobori
+% \item Co-Investigators: Michael Berumen, Robert Hoehndorf
+% \item Amount: 389,713 USD (105,838 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \years{2016-2018}{\em Data integration and ontologies for microbial
+%   cell factories.}
+% \begin{itemize}
+% \item Funding body: KAUST (Center Competitive Funding)
+% \item PI: Vladimir Bajic
+% \item Role: WP leader
+% \item Amount: 4,786,036 USD (115,691 USD to Robert Hoehndorf)
+% \end{itemize}
+
+% \section*{Invited talks}
+
+% \subsection*{Keynote and distinguished lectures}
+
+% \subsection*{Departmental talks}
+% \years{2018}{\em Learning from Semantic Biological Data.} Research
+% Seminar, Warwick University, UK.\vspace{.3cm}\\
+% \years{2018}{\em Learning from Semantic Biological Data.} Research
+% Seminar, Swansea University, UK.\vspace{.3cm}\\
+% \years{2018}{\em Learning from Semantic Biological Data.} Research
+% Seminar, Aberystwyth University, UK.\vspace{.3cm}\\
+% \years{2018}{\em Learning from Semantic Biological Data.} Research
+% Seminar, Bangor University, UK.\vspace{.3cm}\\
+% \years{2018}{\em Semantic prioritization of causative variants in
+%   oligogenic disease.} Research Seminar, Leiden University Hospital,
+% Holland.\vspace{.3cm}\\
+% \years{2018}{\em Learning from Semantic Biological Data.} Research
+% Seminar, Northeastern University, US.\vspace{.3cm}\\
+% \years{2018}{\em Symbolic AI in Computational Biology.} Bioinformatics
+% Research Seminar, University of Cambridge, UK.\vspace{.3cm}\\
+% \years{2017}{\em Combining symbolic and statistical AI methods for biomedical data
+% analysis.} Research seminar, IIIS, Tsinghua University.\vspace{.3cm}\\
+% \years{2017}{\em Semantic prioritization of novel causative variants.}
+% Research seminar, Peking University.\vspace{.3cm}\\
+% \years{2017}{\em The Semantic Web -- Bioinformatics applications.} Lecture
+% in CS, Tsinghua University.\vspace{.3cm}\\
+% \years{2017}{\em Symbolic AI in Computational Biology.} Special
+% Research Seminar, Scripps Research Institute.\vspace{.3cm}\\
+% \years{2017}{\em Symbolic AI in Computational Biology.} Biomedical
+% Informatics Research Seminar, Stanford
+% University.\vspace{.3cm}\\
+% \years{2017}{\em Symbolic AI in Computational Biology.} Special
+% Research Seminar, University of Colorado Denver.\vspace{.3cm}\\
+% \years{2017}{\em Symbolic AI in Computational Biology.} Research
+% Seminar, Maastricht University.\vspace{.3cm}\\
+% \years{2017}{\em Ontologies in Biology.} Colloquium in Honor of
+% Prof. Dr. Heinrich Herre on the Occassion of his 75th Birthday,
+% University of Leipzig.\vspace{.3cm}\\
+% \years{2016}{\em Ontologies of phenotypes and their applications in
+%   personalized medicine}. CS
+% Seminar, University of Murcia.\vspace{.3cm}\\
+% \years{2016}{\em Mobilizing and integrating phenotype
+%   data}. Biodiversity-Informatics Seminar, Senckenberg Institute for
+% Biodiversity.\vspace{.3cm}\\
+% \years{2013}{\em From ontologies to translational medicine}. CS
+% Seminar, University of Rostock.\vspace{.3cm}\\
+% \years{2012}{\em From ontologies to translational medicine}. Invited
+% External Speaker, European Bioinformatics Institute.\vspace{.3cm}\\
+% \years{2012}{\em Phenotype informatics and translational
+%   research}. IMISE Kolloqium, Institute for Medical Informatics,
+% Statistics and Epidemiology, University of Leipzig.\vspace{.3cm}\\
+% \years{2012}{\em Ontologies for integrating and analyzing
+%   phenotypes}. Department of Computer Science, University of
+% Birmingham.\vspace{.3cm}\\
+% \years{2011}{\em Exploring phenotype data for information about rare
+%   diseases}. Department of Computer Science, University of
+% Capetown.\vspace{.3cm}\\
+% \years{2011}{\em Ontologies for representing, integrating and
+%   analyzing phenotypes}. AIC Seminar, Stanford Research
+% Institute.\vspace{.3cm}\\
+% \years{2011}{\em Towards integration of biomedical ontologies and
+%   systems biology}. Computational Modeling in Biology Network
+% (COMBINE).\vspace{.3cm}\\
+% \years{2011}{\em Integrating systems biology and biomedical
+%   ontologies}. Workshop on Modelling interoperability, European
+% Bioinformatics Institute.\vspace{.3cm}\\
+% \years{2010}{\em Interoperability between biomedical
+%   ontologies}. Knowledge Representation and Knowledge Management
+% Research Group, University Mannheim.\vspace{.3cm}\\
+% \years{2010}{\em The ontology of biomedical sequences}. IMISE
+% Kolloqium, Institute for Medical Informatics, Statistics and
+% Epidemiology, University of Leipzig.\vspace{.3cm}\\
+% \years{2010}{\em Perspectives for the ontology of
+%   phenotypes}. Ontology Interest Group, European Bioinformatics
+% Institute.\vspace{.3cm}\\
+% \years{2010}{\em An introduction to formal ontology}. Ontology
+% Interest Group, European Bioinformatics Institute.\vspace{.3cm}\\
+% \years{2008}{\em Towards interoperability between anatomy and
+%   phenotype ontologies}. Dagstuhl seminar {\em Ontologies and Text
+%   Mining for Life Sciences : Current Status and Future
+%   Perspectives}.\vspace{.3cm}\\
+% \years{2007}{\em Interoperability, non-monotonicity and core
+%   ontologies}. Dagstuhl seminar {\em Towards Interoperability of
+%   Biomedical Ontologies}.
+
+
+
+\section*{Teaching experience}
+\subsection*{Courses}
+\noindent
+\years{2020}{\em Co-Instructor} for {\em Algorithms in Bioinformatics},
+Computer Science Program, King Abdullah University of Science and
+Technology.\vspace{.3cm}\\
+\years{2013}{\em Instructor} for {\em Database Management, SQL},
+Information Systems Program, University of International Business.\vspace{.3cm}\\
+\years{2013}{\em Instructor} for {\em Enterprise Level Applications},
+Information Systems Program, Kazakh-British Technical University.\vspace{.3cm}\\
+\years{2012-2013}{\em Instructor} for {\em Programming Languages},
+Information Systems Program, Kazakh-British Technical University.\vspace{.3cm}\\
+\years{2010}{\em Instructor} for {\em Fundamentals of Web Development},
+Information Systems Program, Kazakh-British Technical University.\vspace{.3cm}\\
+\years{2010}{\em Instructor} for {\em Algorithms and Data Structures},
+Information Systems Program, Kazakh-British Technical University.\vspace{.3cm}\\
+\years{2009-2010}{\em Instructor} for {\em Informatics},
+Information Systems Program, Kazakh-British Technical University.\vspace{.3cm}\\
+
+% \section*{Research supervised}
+% \subsection*{Supervision at KAUST}
+
+% \begin{table}[h!]
+%   \centering
+%   \begin{tabular}{|l|l|l|}
+%     \toprule
+%     \multicolumn{3}{c}{Supervision at KAUST}\\
+%     \hline
+%     {\bf Primary Supervision -- Masters} & {\bf Primary Supervision -- PhD} &
+%                                                                   {\bf
+%                                                                               PostDoc
+%                                                                               supervision}\\
+%     Completed: 6 & Completed: 3 & Completed: 1\\
+%     In progress: 0 & In progress: 6 & In progress: 2\\
+%     \bottomrule
+%   \end{tabular}
+% \end{table}
+
+% \begin{itemize}
+% \item Primary supervision -- Masters:
+%   \begin{itemize}
+%   \item Completed: 3
+%   \item In progress: 3
+%   \end{itemize}
+% \item Primary supervision -- PhD:
+%   \begin{itemize}
+%   \item Completed: 1
+%   \item In progress: 5
+%   \end{itemize}
+% \item Postdoc supervision:
+%   \begin{itemize}
+%   \item Completed: 1
+%   \end{itemize}
+% \end{itemize}
+
+% \subsubsection*{PhD advisor}
+
+% \noindent
+% \years{2015--2019}Imane Boudellioua, Computer Science; Semantic
+% Prioritization of Novel Causative Variants (Start date: 2015,
+% Graduated: 2019)
+% \begin{itemize}
+% \item First (current) position: Assistant Professor in Computer Science, King
+%   Fahd University of Petroleum and Minerals, Saudi Arabia
+% \end{itemize}
+% \years{2015--2019}Mona Alshahrani, Computer Science; Multi-modal
+% learning on biological knowledge graphs (Start date: 2015,
+% Graduated: 2019)
+% \begin{itemize}
+% \item First (current) position: Assistant Professor in
+%   Computer Science, Jubail University College, Saudi Arabia
+% \end{itemize}
+% \years{2015--2020}Maxat Kulmanov, Computer Science; Prediction of
+% protein functions and phenotypes (Start date: 2015, Graduated:
+% 2020)\\
+% \years{2018--now}Sarah Alghamdi, Computer Science; Ontology design
+% patterns for biomedical data analysis (Start date: 2018, Expected
+% graduation: 2022)\\
+% \years{2019--now}Sara Althubaiti, Computer Science; Variant
+% prioritization in cancer (Start date: 2019, Expected
+% graduation: 2023)\\
+% \years{2019--now}Azza Althagafi, Computer Science; Mechanistic
+% understanding of complex disease through analysis of longitudinal
+% health data (Start date: 2019, Expected graduation: 2023)\\
+% \years{2018--now}Jun Chen, Computer Science (Start date: 2018,
+% Expected graduation: 2023)\\
+% \years{2019--now}Sumyyah Toonsi, Computer Science (Start date: 2019,
+% Expected graduation: 2023)
+
+% \subsubsection*{MSc advisor}
+% \years{2019--now}Sakhaa Alsaedi, Computer Science (Start date:
+% 2017, Graduated: 2020)\\
+% \years{2018--2019}Abeer Almutairi, Computer Science; Unsupervised
+% methods for named entity recognition (Start date:
+% 2017, Graduated: 2019)\\
+% \years{2019}Sumyyah Toonsi, Computer Science; Automatic annotation of
+% protein functions through text mining (Start date: 2017, Graduated:
+% 2019)
+% \begin{itemize}
+% \item First (current) position: PhD student at KAUST
+% \end{itemize}
+% \years{2017--2018}Sarah Alghamdi, Computer Science; Ontology design
+% patterns for aging mouse ontologies (Start date: 2017, Graduated:
+% 2018)
+% \begin{itemize}
+% \item First (current) position: PhD student at KAUST
+% \end{itemize}
+% \years{2018}Sara Althubaiti, Computer Science; Ontology-based
+% identification of cancer driver genes (Start date: 2018, Graduated:
+% 2018)
+% \begin{itemize}
+% \item First (current) position: PhD student at KAUST
+% \end{itemize}
+% \years{2018} Azza Althagafi, Computer Science; Simulation and
+% visualization of human genomes (Start date: 2018, Graduated:
+% 2018)
+% \begin{itemize}
+% \item First (current) position: PhD student at KAUST
+% \end{itemize}
+
+% \subsubsection*{MSc co-advisor}
+% \years{2017}Omar Maddouri, Biological and Biomedical Sciences, Hamad
+% Bin Khalifa University, Qatar; Deep learning on biological knowledge
+% graphs\\
+% \years{2018--2019}Ian Coleman, Bioinformatics, Wageningen University, The
+% Netherlands; Predicting Chemical--Disease Associations with Ontological
+% Embeddings and Artificial Intelligence
+
+% \subsubsection*{Postdoc supervised}
+% \years{2016-2018} Miguel Angel Rodriguez Garcia:
+% \begin{itemize}
+% \item Start date: 2016
+% \item Field of study: Computer Science
+% \item Departure date: 2018
+% \item Previous institution: University of Murcia
+% \item Current position: Research scientist, King Juan Carlos
+%   University, Spain
+% \end{itemize}
+
+
+% \years{2018--2019}{\em Co-supervision of master thesis}, Computer Science,
+% King Abdullah University of Science and Technology
+% \begin{itemize}
+% \item Topic: Prediction of chemical toxicity
+% \end{itemize}
+% \years{2018}{\em Supervision of master thesis}, Computer Science,
+% King Abdullah University of Science and Technology
+% \begin{itemize}
+% \item Topic: Visualization and Simulation of Genomes for Premarital
+%   Testing.
+% \end{itemize}
+% \years{2018}{\em Supervision of master thesis}, Computer Science,
+% King Abdullah University of Science and Technology
+% \begin{itemize}
+% \item Topic: Ontology-based prediction of cancer driver genes.
+% \end{itemize}
+% \years{2017-2018}{\em Supervision of master thesis}, Computer Science,
+% King Abdullah University of Science and Technology
+% \begin{itemize}
+% \item Topic: Ontology Design Patterns for Combining Pathology and
+%   Anatomy: Application to Study Ageing and Longevity in Inbred Mouse
+%   Strains
+% \end{itemize}
+% \years{2016--2017}{\em Co-supervision of master thesis}, Life Sciences
+% Division, Hamad Bin Khalifa University, Qatar
+% \begin{itemize}
+% \item Topic: deep learning on biological knowledge graphs
+% \end{itemize}
+% \years{2014}{\em Supervision} (3) and {\em Co-supervision} (2) for
+% final year {\em BSc Computer Science} projects, Department of Computer
+% Science, Aberystwyth University\\
+% \years{2008-2009}{\em Co-supervision of master thesis}, Department of
+% Computer Science, University of Leipzig and Max Planck Institute for
+% Evolutionary Anthropology, Leipzig, Germany.
+% \begin{itemize}
+% \item Topic: ontology-based collaborative tagging in biomedicine.
+% \end{itemize}
+% \years{2006-2008}{\em Co-supervision of master thesis}, Institute for
+% Logics and Philosophy of Science, University of Leipzig and Max Planck
+% Institute for Evolutionary Anthropology, Leipzig, Germany.
+% \begin{itemize}
+%   \item Topic: use of automated reasoning in a semantic wiki for life
+%     science data.
+% \end{itemize}
+% \years{2006-2008}{\em Co-supervision of master thesis}, Department of
+% Computer Science, University of Leipzig and Max Planck Institute for
+% Evolutionary Anthropology, Leipzig, Germany.
+% \begin{itemize}
+% \item Topic: representing $n$-ary relations and roles in a semantic
+%   wiki.
+% \end{itemize}
+
+% \section*{University service}
+
+% \years{2019--2020}{\em Directed Research Evaluation Committee}, King Abdullah
+% University of Science and Technology.\\
+% \years{2019}{\em Advisory committee on AI strategy}, King Abdullah
+% University of Science and Technology.\\
+% \years{2018--now}{\em Steering committee member} of Women in Data
+% Science and Technology, King Abdullah University of Science and
+% Technology.
+
+\section*{Professional service}
+
+\noindent
+
+% \subsection*{Editorial work}
+
+% Since 2014, I have been handling editor for over 50 manuscripts at 5
+% journals.\\
+% \years{2018--2021} Member of Editorial Board: {\em PLoS ONE}\\
+% \years{2017--now} Associate Editor: {\em Applied Ontology}\\
+% \years{2017--now} Associate Editor: {\em BMC Bioinformatics}\\
+% \years{2016--now} Member of Editorial Board: {\em Data Science}\\
+% \years{2012--now} Associate Editor: {\em Journal of Biomedical
+%   Semantics}\\
+% \years{2012} Editor: Special Issue on Ontologies in Biomedicine and
+% Life Sciences in {\em Journal of Biomedical Semantics}\\
+% \years{2011} Editor: Special Issue on Ontologies in Biomedicine and
+% Life Sciences in {\em Journal of Biomedical Semantics}\\
+% \years{2010} Editor: Special Issue on Ontologies in Biomedicine and
+% Life Sciences in {\em Journal of Biomedical Semantics}\\
+
+% \subsection*{Reviewer for funding organizations}
+% In total, I reviewed over 50 research proposal since joining KAUST and
+% participated in four grant review panels.  I have reviewed research
+% grant applications for
+% \begin{itemize}
+% \item German Federal Ministry of Education and Research (BMBF)
+% \item German Research Foundation (DFG)
+% \item National Research Fund Luxembourg (FNR)
+% \item Dr Hadwen Trust
+% \item European Commission Horizon 2020: ERA-Net for Research
+%   Programmes on Rare Diseases
+% \item Alzheimer's Research UK
+% \end{itemize}
+% and have been an invited panel member for grant programs at
+% \begin{itemize}
+% \item German Federal Ministry of Education and Research (BMBF)
+%   \begin{itemize}
+%   \item i:DSem -- Integrative Data Semantics
+%   \item Computational Life Sciences
+%   \item Computational Life Sciences (Deep Learning in Life Sciences)
+%   \end{itemize}
+% \end{itemize}
+
+
+\subsection*{Reviewer for journals}
+Since joining KAUST, I reviewed manuscripts for {\em Nature Machine
+Intelligence}, {\em Nature Communications}, {\em Journal of
+Computational Biology and Chemistry}, {\em Bioinformatics}, {\em
+Applied Ontology}, {\em BMC Bioinformatics}, {\em BMC Medical Informatics},
+{\em Journal of Biomedical
+Semantics}, {\em PeerJ}, {\em PLoS ONE}, and {\em Nature Scientific Reports}.
+
+\subsection*{Conference organization}
+
+\years{2021}{\em Organizing commitee} for Bio-Ontologies 2021\\
+\years{2020}{\em PC Member} for Bio-Ontologies 2020\\
+\years{2020}{\em PC member} of the 17th European Conference on
+Computational Biology (ECCB)\\
+\years{2019}{\em PC Member} for Semantic Web Applications and Tools in
+Health Care and Life Sciences (SWAT4HCLS) 2019\\
+\years{2018}{\em PC member} of the 17th European Conference on
+Computational Biology (ECCB)\\
+\years{2018}{\em PC Member} for Semantic Web Applications and Tools in
+Health Care and Life Sciences (SWAT4HCLS) 2018\\
+
+
+
+% \\
+% \years{2009--2013}International Organization for Ontology and its
+% Applications (IAOA)
+% \begin{itemize}
+% \item \years{2009--2012} sub-chair of education committee for Doctoral Consortia
+% \end{itemize}
+
+%\hrule
+
+% \section*{References}
+% The following scientists have agreed to provide a reference for me:
+% \begin{itemize}
+% \item Dr. Paul Schofield. Department of Physiology, Development and
+%   Neuroscience, University of Cambridge, Cambridge CB2 3EG, UK,\\
+%   \href{mailto:pns12@hermes.cam.ac.uk}{pns12@hermes.cam.ac.uk}.
+% \item Dr. Georgios V. Gkoutos. Department of Computer Science,
+%   Aberystwyth University, Aberystwyth, SY23 3DB, UK,\\
+%   \href{mailto:geg18@aber.ac.uk}{geg18@aber.ac.uk}.
+% \item Prof. Dr. Heinrich Herre, Institute for Medical Informatics,
+%   Statistics and Epidemiology, University of Leipzig. Haertelstrasse
+%   16--18, 04107 Leipzig, Germany,\\
+%   \href{mailto:heinrich.herre@imise.uni-leipzig.de}{heinrich.herre@imise.uni-leipzig.de}.
+% \item Dr. Dietrich Rebholz-Schuhmann. European Bioinformatics
+%   Institute. Wellcome Trust Genome Campus, Hinxton, Cambridge, CB10
+%   1SD, UK,\\ \href{mailto:rebholz@ebi.ac.uk}{rebholz@ebi.ac.uk}.
+% \item Prof. Dr. Michel Dumontier, Stanford Center for Biomedical
+%   Informatics Research, Stanford University, Medical School Office
+%   Building, 1265 Welch Road, Stanford, CA, 94305-5479, USA\\
+%   \href{mailto:Michel\_Dumontier@carleton.ca}{michel.dumontier@stanford.edu}.
+% \item Dr. Janet Kelso. Max Planck Institute for Evolutionary
+%   Anthropology. Deutscher Platz 6, 04103 Leipzig,
+%   Germany,\\
+%   \href{mailto:kelso@eva.mpg.de}{kelso@eva.mpg.de}.
+% \end{itemize}
+
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- •\- 
+}
+\end{center}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
