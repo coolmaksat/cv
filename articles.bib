@@ -1,3 +1,49 @@
+@article {ksa001,
+	author = {Kulmanov, Maxat and Tawfiq, Rund and Al Ali, Hatoon and Abdelhakim, Marwa and Alarawi, Mohammed and Aldakhil, Hind and Alhattab, Dana and Alsolme, Ebtehal A. and Althagafi, Azza and Angelov, Angel and Bougouffa, Salim and Driguez, Patrick and Liu, Yang and Park, Changsook and Putra, Alexander and Reyes-Ramos, Ana M. and Hauser, Charlotte A. E. and Cheung, Ming Sin and Abedalthagafi, Malak S and Hoehndorf, Robert},
+	title = {A personal, reference quality, fully annotated genome from a Saudi individual},
+	elocation-id = {2022.11.05.515129},
+	year = {2022},
+	doi = {10.1101/2022.11.05.515129},
+	publisher = {Cold Spring Harbor Laboratory},
+	abstract = {We have used multiple sequencing approaches to sequence the genome of a volunteer from Saudi Arabia. We use the resulting data to generate a de novo assembly of the genome, and use different computational approaches to refine the assembly. As a consequence, we provide a contiguous assembly of the complete genome of an individual from Saudi Arabia for all chromosomes except chromosome Y, and label this assembly KSA001. We transferred genome annotations from reference genomes and predicted genome features using methods from Artificial Intelligence to fully annotate KSA001, and we make all primary sequencing data, the assembly, and the genome annotations freely available in public databases using the FAIR data principles.Competing Interest StatementThe authors have declared no competing interest.},
+	URL = {https://www.biorxiv.org/content/early/2022/11/08/2022.11.05.515129},
+	eprint = {https://www.biorxiv.org/content/early/2022/11/08/2022.11.05.515129.full.pdf},
+	journal = {bioRxiv}
+}
+
+@article{mowl,
+    author = {Zhapa-Camacho, Fernando and Kulmanov, Maxat and Hoehndorf, Robert},
+    title = "{mOWL: Python library for machine learning with biomedical ontologies}",
+    journal = {Bioinformatics},
+    volume = {39},
+    number = {1},
+    year = {2022},
+    month = {12},
+    abstract = "{Ontologies contain formal and structured information about a domain and are widely used in bioinformatics for annotation and integration of data. Several methods use ontologies to provide background knowledge in machine learning tasks, which is of particular importance in bioinformatics. These methods rely on a set of common primitives that are not readily available in a software library; a library providing these primitives would facilitate the use of current machine learning methods with ontologies and the development of novel methods for other ontology-based biomedical applications.We developed mOWL, a Python library for machine learning with ontologies formalized in the Web Ontology Language (OWL). mOWL implements ontology embedding methods that map information contained in formal knowledge bases and ontologies into vector spaces while preserving some of the properties and relations in ontologies, as well as methods to use these embeddings for similarity computation, deductive inference and zero-shot learning. We demonstrate mOWL on the knowledge-based prediction of protein–protein interactions using the gene ontology and gene–disease associations using phenotype ontologies.mOWL is freely available on https://github.com/bio-ontology-research-group/mowl and as a Python package in PyPi.Supplementary data are available at Bioinformatics online.}",
+    issn = {1367-4811},
+    doi = {10.1093/bioinformatics/btac811},
+    url = {https://doi.org/10.1093/bioinformatics/btac811},
+    note = {btac811},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/39/1/btac811/48763576/btac811.pdf},
+}
+
+
+@article{deepgozero,
+    author = {Kulmanov, Maxat and Hoehndorf, Robert},
+    title = "{DeepGOZero: improving protein function prediction from sequence and zero-shot learning based on ontology axioms}",
+    journal = {Bioinformatics},
+    volume = {38},
+    number = {Supplement_1},
+    pages = {i238-i245},
+    year = {2022},
+    month = {06},
+    abstract = "{Protein functions are often described using the Gene Ontology (GO) which is an ontology consisting of over 50 000 classes and a large set of formal axioms. Predicting the functions of proteins is one of the key challenges in computational biology and a variety of machine learning methods have been developed for this purpose. However, these methods usually require a significant amount of training data and cannot make predictions for GO classes that have only few or no experimental annotations.We developed DeepGOZero, a machine learning model which improves predictions for functions with no or only a small number of annotations. To achieve this goal, we rely on a model-theoretic approach for learning ontology embeddings and combine it with neural networks for protein function prediction. DeepGOZero can exploit formal axioms in the GO to make zero-shot predictions, i.e., predict protein functions even if not a single protein in the training phase was associated with that function. Furthermore, the zero-shot prediction method employed by DeepGOZero is generic and can be applied whenever associations with ontology classes need to be predicted.http://github.com/bio-ontology-research-group/deepgozero.Supplementary data are available at Bioinformatics online.}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/btac256},
+    url = {https://doi.org/10.1093/bioinformatics/btac256},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/38/Supplement\_1/i238/44269467/btac256\_supplementary\_data.pdf},
+}
+
 @article{deepgoweb,
     author = {Kulmanov, Maxat and Zhapa-Camacho, Fernando and Hoehndorf, Robert},
     title = "{DeepGOWeb: fast and accurate protein function prediction on the (Semantic) Web}",
@@ -12,7 +58,7 @@
     url = {https://doi.org/10.1093/nar/gkab373},
     eprint = {https://academic.oup.com/nar/article-pdf/49/W1/W140/38841723/gkab373.pdf},
 }
-                                                                                           
+
 @article{deeppheno,
     author = {Kulmanov, Maxat AND Hoehndorf, Robert},
     journal = {PLOS Computational Biology},
@@ -90,7 +136,6 @@
 }
 
 
-
 @ARTICLE{Alam2020,
 AUTHOR={Alam, Intikhab and Kamau, Allan A. and Kulmanov, Maxat and Jaremko, Lukasz and Arold, Stefan T. and Pain, Arnab and Gojobori, Takashi and Duarte, Carlos M.},
 TITLE={Functional Pangenome Analysis Shows Key Features of E Protein Are Preserved in SARS and SARS-CoV-2},      
@@ -103,7 +148,7 @@ DOI={10.3389/fcimb.2020.00405},
 ISSN={2235-2988}
 }
 
-﻿@Article{Salhi2017,
+@Article{Salhi2017,
 author={Salhi, Adil
 and Negr{\~a}o, S{\'o}nia
 and Essack, Magbubah
@@ -146,7 +191,7 @@ url={https://doi.org/10.1038/s41598-017-05448-0}
     doi = {10.1371/journal.pcbi.1005500}
 }
 
-﻿@article{Kulmanov2017,
+@article{Kulmanov2017,
   author={Kulmanov, Maxat and Hoehndorf, Robert},
   title={Evaluating the effect of annotation size on measures of semantic similarity},
   journal={Journal of Biomedical Semantics},
@@ -162,7 +207,7 @@ doi={10.1186/s13326-017-0119-z},
 url={https://doi.org/10.1186/s13326-017-0119-z}
 }
 
-﻿@Article{Boudellioua2019,
+@Article{Boudellioua2019,
 author={Boudellioua, Imane
 and Kulmanov, Maxat
 and Schofield, Paul N.
@@ -182,7 +227,7 @@ doi={10.1186/s12859-019-2633-8},
 url={https://doi.org/10.1186/s12859-019-2633-8}
 }
 
-﻿@Article{Boudellioua2018,
+@Article{Boudellioua2018,
 author={Boudellioua, Imane
 and Kulmanov, Maxat
 and Schofield, Paul N.
@@ -203,7 +248,7 @@ url={https://doi.org/10.1038/s41598-018-32876-3}
 }
 
 
-﻿@Article{Kafkas2019,
+@Article{Kafkas2019,
 author={Kafkas, {\c{S}}enay
 and Abdelhakim, Marwa
 and Hashish, Yasmeen
@@ -244,29 +289,3 @@ url={https://doi.org/10.1038/s41597-019-0090-x}
    abstract = "Contemporary metagenomic annotation methods have proven insufficient in our attempts to better understand the complex environments around us. We call the yet to be annotated part of a metagenome it’s ‘dark matter’. The Gene Ontology (GO) is a hierarchical vocabulary used to describe gene product function and a large collection of curated genes with GO annotations already exists. DeepGO utilises deep learning to build models from these curated genes and gene products to predict GO categories for novel proteins. One of the major problems with metagenomic studies today is the process of assembling the environmental DNA sequences into their original genomes. This is difficult, with chimeric metagenomically assembled genomes being common. To avoid this and the computational and time expense, we have modified DeepGO to perform protein function prediction directly from sequence reads with limited protein coding sequence prediction. Three independent models were trained as the following; The first 50 amino acids of a protein were used for training, The last 50 amino acids were used for training, A phasing window of 50 amino acids was used to train across the entirety of a protein sequence. These models were chosen to learn from the different parts of a protein sequence we are likely to capture from only the short unassembled sequence reads. We compared the three models by producing a mock metagenomic community consisting of 6 model bacterial genomes. We evaluated the functions predicted from the unassembled sequence reads and the protein coding sequences predicted from the assembled metagenome.",
   }
 
-@article{mowl,
-    author = {Kulmanov, Maxat and Smaili, Fatima Zohra and Gao, Xin and Hoehndorf, Robert},
-    title = "{Semantic similarity and machine learning with ontologies}",
-    journal = {Briefings in Bioinformatics},
-    year = {2020},
-    month = {10},
-    abstract = "{Ontologies have long been employed in the life sciences to formally represent and reason over domain knowledge and they are employed in almost every major biological database. Recently, ontologies are increasingly being used to provide background knowledge in similarity-based analysis and machine learning models. The methods employed to combine ontologies and machine learning are still novel and actively being developed. We provide an overview over the methods that use ontologies to compute similarity and incorporate them in machine learning methods; in particular, we outline how semantic similarity measures and ontology embeddings can exploit the background knowledge in ontologies and how ontologies can provide constraints that improve machine learning models. The methods and experiments we describe are available as a set of executable notebooks, and we also provide a set of slides and additional resources at https://github.com/bio-ontology-research-group/machine-learning-with-ontologies.}",
-    issn = {1477-4054},
-    doi = {10.1093/bib/bbaa199},
-    url = {https://doi.org/10.1093/bib/bbaa199},
-    note = {bbaa199},
-    eprint = {https://academic.oup.com/bib/advance-article-pdf/doi/10.1093/bib/bbaa199/33875255/bbaa199.pdf},
-}
-
-@article {deepgozero,
-	author = {Kulmanov, Maxat and Hoehndorf, Robert},
-	title = {DeepGOZero: Improving protein function prediction from sequence and zero-shot learning based on ontology axioms},
-	elocation-id = {2022.01.14.476325},
-	year = {2022},
-	doi = {10.1101/2022.01.14.476325},
-	publisher = {Cold Spring Harbor Laboratory},
-	abstract = {Motivation Protein functions are often described using the Gene Ontology (GO) which is an ontology consisting of over 50,000 classes and a large set of formal axioms. Predicting the functions of proteins is one of the key challenges in computational biology and a variety of machine learning methods have been developed for this purpose. However, these methods usually require significant amount of training data and cannot make predictions for GO classes which have only few or no experimental annotations.Results We developed DeepGOZero, a machine learning model which improves predictions for functions with no or only a small number of annotations. To achieve this goal, we rely on a model-theoretic approach for learning ontology embeddings and combine it with neural networks for protein function prediction. DeepGOZero can exploit formal axioms in the GO to make zero-shot predictions, i.e., predict protein functions even if not a single protein in the training phase was associated with that function. Furthermore, the zero-shot prediction method employed by DeepGOZero is generic and can be applied whenever associations with ontology classes need to be predicted.Availability http://github.com/bio-ontology-research-group/deepgozeroContact robert.hoehndorf{at}kaust.edu.saCompeting Interest StatementThe authors have declared no competing interest.},
-	URL = {https://www.biorxiv.org/content/early/2022/01/14/2022.01.14.476325},
-	eprint = {https://www.biorxiv.org/content/early/2022/01/14/2022.01.14.476325.full.pdf},
-	journal = {bioRxiv}
-}
